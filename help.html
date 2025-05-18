@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用帮助 - 免费VPN下载</title>
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --primary-hover: #0052a3;
+            --text-color: #333;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --border-color: #eee;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .logo img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .main-container {
+            display: flex;
+            margin-top: 64px;
+            min-height: calc(100vh - 64px);
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .help-section {
+            margin-bottom: 3rem;
+        }
+
+        .help-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .help-section h3 {
+            color: var(--text-color);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        .help-section p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .help-section ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .help-section li {
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .faq-section {
+            background-color: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item h3 {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+        }
+
+        .footer {
+            background-color: var(--bg-light);
+            border-top: 1px solid var(--border-color);
+            padding: 1rem;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+        .sidebar {
+            width: 250px;
+            padding: 2rem;
+            background-color: var(--bg-light);
+            border-right: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .toc {
+            position: sticky;
+            top: 80px;
+        }
+        
+        .toc-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img src="/img/v2rayN.png" alt="Logo">
+                <span>免费VPN下载</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">官网地址</a>
+                <a href="https://youtu.be/hT8xp46Gbxg">使用教程</a>
+                <a href="help.html">常见问题</a>
+                <a href="index.html">最新版下载</a>
+                <a href="index.html">客户端大全</a>
+                <a href="index.html">节点订阅</a>
+                <a href="about.html">关于我们</a>
+                <a href="#">机场推荐</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-container">
+            <aside class="sidebar">
+                <div class="toc">
+                    <h2 class="toc-title">目录</h2>
+                    <ul class="toc-list">
+                        <li><a href="/index.html">v2rayN 下载</a></li>
+                        <li><a href="/index.html">v2RayNG 下载</a></li>
+                        <li><a href="/index.html">Shadowrocket 下载</a></li>
+                        <li><a href="/about.html">关于我们</a></li>
+                        <li><a href="/help.html">常见问题</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+        <main class="content">
+            <section class="help-section">
+                <h2>使用教程</h2>
+                <h3>Windows平台 (v2rayN)</h3>
+                <ul>
+                    <li>下载并解压v2rayN客户端</li>
+                    <li>运行v2rayN.exe程序</li>
+                    <li>右键点击系统托盘图标，选择"订阅设置"</li>
+                    <li>添加订阅地址并更新订阅</li>
+                    <li>选择合适的节点，即可开始使用</li>
+                </ul>
+
+                <h3>Android平台 (v2rayNG)</h3>
+                <ul>
+                    <li>下载并安装v2rayNG APK</li>
+                    <li>打开v2rayNG应用</li>
+                    <li>点击左上角菜单，选择"订阅设置"</li>
+                    <li>添加订阅地址并更新订阅</li>
+                    <li>选择节点并点击连接按钮</li>
+                </ul>
+
+                <h3>iOS平台 (Shadowrocket)</h3>
+                <ul>
+                    <li>在App Store下载Shadowrocket</li>
+                    <li>打开Shadowrocket</li>
+                    <li>点击右上角+号，选择"Subscribe"</li>
+                    <li>输入订阅地址并更新</li>
+                    <li>选择节点并开启连接</li>
+                </ul>
+            </section>
+
+            <section class="faq-section">
+                <h2>常见问题</h2>
+                <div class="faq-item">
+                    <h3>为什么连接速度较慢？</h3>
+                    <p>连接速度可能受多种因素影响，建议尝试更换不同的节点，选择地理位置较近的服务器可能会获得更好的速度。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>如何更新节点？</h3>
+                    <p>在客户端中找到订阅更新选项，点击更新即可获取最新的节点信息。建议定期更新以获得最佳体验。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>连接失败怎么办？</h3>
+                    <p>首先检查网络是否正常，然后尝试更换其他节点。如果问题持续，可以尝试重启客户端或更新订阅。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>如何选择最适合的节点？</h3>
+                    <p>建议选择延迟较低的节点，可以通过客户端的测速功能来测试不同节点的延迟，选择最适合的节点使用。</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+        <footer class="footer">
+            <p>COPYRIGHT © 2020 - 2025 BIGJACKSON.ALL RIGHTS RESERVED. BigJackson 版权所有</p>
+        </footer>
+
+        <script>

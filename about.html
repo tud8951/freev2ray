@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 免费VPN下载</title>
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --primary-hover: #0052a3;
+            --text-color: #333;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --border-color: #eee;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .logo img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .main-container {
+            display: flex;
+            margin-top: 64px;
+            min-height: calc(100vh - 64px);
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-section {
+            margin-bottom: 3rem;
+        }
+
+        .about-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .about-section p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .team-section {
+            background-color: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+        }
+
+        .team-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .team-section p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background-color: var(--bg-light);
+            border-top: 1px solid var(--border-color);
+            padding: 1rem;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+        .sidebar {
+            width: 250px;
+            padding: 2rem;
+            background-color: var(--bg-light);
+            border-right: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .toc {
+            position: sticky;
+            top: 80px;
+        }
+        
+        .toc-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img src="/img/v2rayN.png" alt="Logo">
+                <span>免费VPN下载</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">官网地址</a>
+                <a href="https://youtu.be/hT8xp46Gbxg">使用教程</a>
+                <a href="help.html">常见问题</a>
+                <a href="index.html">最新版下载</a>
+                <a href="index.html">客户端大全</a>
+                <a href="index.html">节点订阅</a>
+                <a href="about.html">关于我们</a>
+                <a href="#">机场推荐</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="toc">
+                <h2 class="toc-title">目录</h2>
+                <ul class="toc-list">
+                    <li><a href="/index.html">v2rayN 下载</a></li>
+                    <li><a href="/index.html">v2RayNG 下载</a></li>
+                    <li><a href="/index.html">Shadowrocket 下载</a></li>
+                    <li><a href="/about.html">关于我们</a></li>
+                    <li><a href="/help.html">常见问题</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="content">
+            <section class="about-section">
+                <h2>关于我们</h2>
+                <p>我们是一个致力于提供安全、稳定、高速的VPN服务的团队。我们的目标是帮助用户突破地理限制，安全地访问互联网资源。</p>
+                <p>我们提供多平台支持，包括Windows、Android和iOS，确保用户在任何设备上都能享受到优质的VPN服务。所有客户端均采用最新的加密技术，保护用户的网络安全和隐私。</p>
+            </section>
+
+            <section class="team-section">
+                <h2>我们的团队</h2>
+                <p>我们的团队由经验丰富的网络安全专家和软件工程师组成。团队成员来自不同的技术背景，但都有着共同的理念：为用户提供最好的VPN服务体验。</p>
+                <p>我们持续关注最新的网络安全技术发展，不断优化我们的服务，确保用户能够获得最佳的使用体验。同时，我们也非常重视用户反馈，积极采纳建议，持续改进我们的产品。</p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>COPYRIGHT © 2020 - 2025 BIGJACKSON.ALL RIGHTS RESERVED. BigJackson 版权所有</p>
+    </footer>
+
+    <script>
