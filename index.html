@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://bigjackson.top/img/favicon.ico" type="image/x-icon">
     <title>免费VPN下载-节点配置</title>
     <style>
         :root {
@@ -66,6 +67,72 @@
         .nav-links {
             display: flex;
             gap: 2rem;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+            background-color: var(--text-color);
+            transition: var(--transition);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 64px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+                box-shadow: var(--shadow-sm);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+
+            .main-container {
+                flex-direction: column;
+            }
+
+            .sidebar, .right-sidebar {
+                width: 100%;
+                border: none;
+                padding: 1rem;
+            }
+
+            .content {
+                padding: 1rem;
+            }
         }
 
         .nav-links a {
@@ -213,6 +280,11 @@
                 <img src="/img/v2rayN.png" alt="Logo">
                 <span>代理工具大全</span>
             </a>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
                 <a href="index.html">官网地址</a>
                 <a href="https://youtu.be/hT8xp46Gbxg">使用教程</a>
@@ -308,6 +380,23 @@
             } else {
                 header.style.boxShadow = 'none';
             }
+        });
+
+        // 汉堡菜单点击事件
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // 点击导航链接时关闭菜单
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
         });
     </script>
 </body>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://bigjackson.top/img/favicon.ico" type="image/x-icon">
     <title>使用帮助 - 免费VPN下载</title>
     <style>
         :root {
@@ -214,8 +215,62 @@
                 <a href="about.html">关于我们</a>
                 <a href="#">机场推荐</a>
             </div>
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuButton.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <style>
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger-menu span {
+            height: 2px;
+            width: 25px;
+            background-color: var(--text-color);
+            margin-bottom: 4px;
+            transition: var(--transition);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 1rem;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: var(--bg-light);
+                width: 100%;
+                box-shadow: var(--shadow-md);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger-menu {
+                display: flex;
+            }
+        }
+    </style>
 
     <div class="main-container">
             <aside class="sidebar">
